@@ -1,6 +1,6 @@
 # import platform module to grab the current user's machine name...
 from platform import node as hostname
-host = hostname()
+HOST = hostname()
 
 def mainMenu():
     while (True):
@@ -12,13 +12,13 @@ def mainMenu():
 
 #prints the current machine hostname and gives length.
         if userInput == 1:
-            print("Your current hostname is:\n"+host+
+            print("Your current hostname is:\n"+HOST+
                   "\nHostname length: "
-                  +str(len(host))+"\n")
+                  +str(len(HOST))+"\n")
 
 #asks the user for input and         
         if userInput == 2:
-            print("\nCurrent hostname: "+host)
+            print("\nCurrent hostname: "+HOST)
             userHost = input("Enter your desired hostname (This is NOT the FQDN, e.g. hostname.foo.bar): ")
            
             if len(userHost) >= 1 and len(userHost) <= 15:
