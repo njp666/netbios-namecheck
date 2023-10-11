@@ -21,7 +21,7 @@ def mainMenu():
             print("\nCurrent hostname: "+HOST)
             userHost = input("Enter your desired hostname (This is NOT the FQDN, e.g. hostname.foo.bar): ")
            
-            if len(userHost) >= 1 and len(userHost) <= 15:
+            if len(userHost) >= 1 or len(userHost) <= 15:
                 print("Length OK.\nYour hostname is: "+userHost+"\nLength: "+str(len(userHost))+"\n")
             
             elif len(userHost) == 0:
