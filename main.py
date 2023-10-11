@@ -1,4 +1,4 @@
-# import platform module to grab the current user's machine name...
+#import platform module to grab the current user's machine name...
 from platform import node as hostname
 HOST = hostname()
 
@@ -16,7 +16,7 @@ def mainMenu():
                   "\nHostname length: "
                   +str(len(HOST))+"\n")
 
-#asks the user for input and         
+#asks the user for input and stores it - checks length and validates it.
         if userInput == 2:
             print("\nCurrent hostname: "+HOST)
             userHost = input("Enter your desired hostname (This is NOT the FQDN, e.g. hostname.foo.bar): ")
@@ -24,11 +24,11 @@ def mainMenu():
             if len(userHost) >= 1 and len(userHost) <= 15:
                 print("Length OK.\nYour hostname is: "+userHost+"\nLength: "+str(len(userHost))+"\n")
             
-            elif len(userHost) <= 0:
+            elif len(userHost) == 0:
                  print("Error. Hostname must be greater than 0 characters.")
 
             else:
-                print("\nHostname too long! Length is: "+str(len(userHost))+"\nMax: 15 characters.\n")
+                print("\nError. Hostname too long Length is: "+str(len(userHost))+"\nMax: 15 characters.\n")
 
         if userInput == 3:
             print("Exiting...\n")
