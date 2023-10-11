@@ -1,1 +1,1 @@
-You've read the readme!
+# NetBIOS Namecheck #

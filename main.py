@@ -1,4 +1,3 @@
-"""abcd"""
 # import platform module to grab the current user's machine name...
 from platform import node as hostname
 host = hostname()
