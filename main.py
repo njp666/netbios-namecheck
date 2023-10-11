@@ -13,7 +13,7 @@ def mainMenu():
 
 #prints the current machine hostname and gives length.
         if userInput == 1:
-            print("Your current hostname is:\n"+hostname()+
+            print("Your current hostname is:\n"+host+
                   "\nHostname length: "
                   +str(len(host))+"\n")
         
